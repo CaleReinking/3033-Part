@@ -23,28 +23,9 @@ namespace _P__WPF__Classes
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            
 
         }
-        public EntryForm()
-        {
 
-        }
-        public EntryForm(string name, string address, int zipcode)
-        {
-        name = Convert.ToString(txtName);
-        address = Convert.ToString(txtAddress);
-        zipcode = Convert.ToInt32(txtZipcode);
-            string output = $"{name} at the address {address} in zipcode {zipcode}";
-        }
-        public override string ToString()
-        {
-            Console.WriteLine(output);
-            return base.ToString();
-        }
+       
     }
 }
