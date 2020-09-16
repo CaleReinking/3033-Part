@@ -27,9 +27,7 @@ namespace _P__WPF__Classes
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string name = Convert.ToString(txtName);
-            string address = Convert.ToString(txtAddress);
-            int zipcode = Convert.ToInt32(txtZipcode);
+            
 
         }
         public EntryForm()
@@ -38,11 +36,14 @@ namespace _P__WPF__Classes
         }
         public EntryForm(string name, string address, int zipcode)
         {
-
+        name = Convert.ToString(txtName);
+        address = Convert.ToString(txtAddress);
+        zipcode = Convert.ToInt32(txtZipcode);
+            string output = $"{name} at the address {address} in zipcode {zipcode}";
         }
         public override string ToString()
         {
-
+            Console.WriteLine(output);
             return base.ToString();
         }
     }
