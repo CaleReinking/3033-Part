@@ -9,9 +9,9 @@ namespace _P__WPF__Classes
 {
     class Entry_Form
     {
-        string Address { get; set; }
-        string Name { get; set;  }
-        string ZipCode { get; set; }
+       public string Address { get; set; }
+       public string Name { get; set;  }
+       public int ZipCode { get; set; }
 
             public Entry_Form()
              {
@@ -24,9 +24,9 @@ namespace _P__WPF__Classes
             zipcode = Convert.ToInt32(ZipCode);
             
         }
-        public override string ToString(string name, string address, int zipcode)
+        public override string ToString()
         {
-            string output = $"{name} at the address {Address} {ZipCode}"; 
+            string output = $"{Name} at the address {Address} {ZipCode}"; 
             return output;
         }
         

@@ -28,10 +28,6 @@ namespace _P__WPF__Classes
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string Name = "";
-            string Address;
-            int ZipCode; 
-
             Entry_Form newApplication = new Entry_Form();
             newApplication.Name = txtName.Text;
             newApplication.Address = txtAddress.Text;
