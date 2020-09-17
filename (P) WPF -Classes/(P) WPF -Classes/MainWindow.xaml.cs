@@ -26,6 +26,28 @@ namespace _P__WPF__Classes
 
         }
 
-       
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = "";
+            string Address;
+            int ZipCode; 
+
+            Entry_Form newApplication = new Entry_Form();
+            newApplication.Name = txtName.Text;
+            newApplication.Address = txtAddress.Text;
+            newApplication.ZipCode = Convert.ToInt32(txtZipcode.Text);
+
+            ListBox.Items.Add(newApplication);
+
+            txtName.Text = "";
+            txtAddress.Text = "";
+            txtZipcode.Text = "";
+        }
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        
+
     }
 }

@@ -3,36 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace _P__WPF__Classes
 {
     class Entry_Form
     {
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
+        string Address { get; set; }
+        string Name { get; set;  }
+        string ZipCode { get; set; }
 
+            public Entry_Form()
+             {
 
-        }
-        public Entry_Form()
-        {
-
-        }
+            }
         public Entry_Form(string name, string address, int zipcode)
         {
-            name = Convert.ToString(txtName);
-            address = Convert.ToString(txtAddress);
-            zipcode = Convert.ToInt32(txtZipcode);
-            string output = $"{name} at the address {address} in zipcode {zipcode}";
+            Name = name;
+            Address = address;
+            zipcode = Convert.ToInt32(ZipCode);
+            
         }
-        public override string ToString()
+        public override string ToString(string name, string address, int zipcode)
         {
-            Console.WriteLine(output);
-            return output.ToString();
+            string output = $"{name} at the address {Address} {ZipCode}"; 
+            return output;
         }
-        void PrintText(object sender, SelectionChangedEventArgs)
-        {
-            ListBoxItem lbi = ((sender as ListBox).SelectedItem as ListBoxItem);
-            TextBlock.Text = Console.WriteLine(output);
-        }
+        
+        
     }
 }
