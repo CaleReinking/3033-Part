@@ -1,0 +1,15 @@
+﻿<Window x:Class="_P.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_P"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cboCharacters" HorizontalAlignment="Left" Margin="540,31,0,0" VerticalAlignment="Top" Width="224" Height="342"/>
+        <Label x:Name="lblSelect" Content="Please select a Pokemon for more information" HorizontalAlignment="Left" Margin="217,99,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Title" Content="JSON Pokemon" HorizontalAlignment="Left" Margin="299,31,0,0" VerticalAlignment="Top" FontSize="24"/>
+
+    </Grid>
+</Window>
