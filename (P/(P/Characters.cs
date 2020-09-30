@@ -10,14 +10,26 @@ namespace _P
 {
     class Characters
     {
-        public Funny funny { get; set; }
         public List<Funny> results { get; set; }
     }
 
     public class Funny
     {
-        public string Name { get; set; }
-        public string URL { get; set; }
+        public string name { get; set; }
+        public string url { get; set; }
+        public override string ToString()
+        {
+            string done = $"{name}{url}";
+            return done;
+        }
     }
+    public class Info
+    {
+        public string height { get; set; }
+        public string weight { get; set; }
+        public string sprite { get; set; }
+    }
+
+
 
 }
