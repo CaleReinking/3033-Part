@@ -31,12 +31,12 @@ namespace _P
 
             string webService = @"https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
 
-            Characters funniest;
+            Characters.Theory funniest;
             using (var client = new HttpClient())
             {
-                var results = client.GetStringAsync(webService).Result;
+                var result = client.GetStringAsync(webService).Result;
 
-                funniest = JsonConvert.DeserializeObject<Characters>(results);
+                funniest = JsonConvert.DeserializeObject<Characters.Theory>(result);
             }
 
             foreach (var funny in funniest.results)
@@ -47,20 +47,16 @@ namespace _P
 
         private void cboCharacters_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var funny = (Funny)cboCharacters.SelectedItem;
-            Info information;
-            using (var client = new HttpClient())
-            {
-                var output = client.GetStringAsync(funny.url);
 
-                information = JsonConvert.DeserializeObject<Info>(output);
-            }
-            foreach (var info in information)
-            {
-                cboCharacters.Items.Add(info);
-            }
-            var uri = new Uri(funny.image);
+            var newItem = cboCharacters.SelectedItem;
+            var url = client.GetStringAsync(newItem).Result;
+            
+
+
+            var uri = new Uri(Theory.image);
             var img = new BitmapImage(uri);
+            imgCharacter.Source = img;
+            MessageBox.Show(url);
         }
     }
 }

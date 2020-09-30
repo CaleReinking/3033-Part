@@ -10,6 +10,7 @@
         <ComboBox x:Name="cboCharacters" HorizontalAlignment="Left" Margin="540,31,0,0" VerticalAlignment="Top" Width="224" Height="342" SelectionChanged="cboCharacters_SelectionChanged"/>
         <Label x:Name="lblSelect" Content="Please select a Pokemon for more information" HorizontalAlignment="Left" Margin="217,99,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Title" Content="JSON Pokemon" HorizontalAlignment="Left" Margin="299,31,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Image x:Name="imgCharacter" HorizontalAlignment="Left" Height="177" Margin="105,172,0,0" VerticalAlignment="Top" Width="258"/>
 
     </Grid>
 </Window>
