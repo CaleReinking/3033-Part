@@ -48,15 +48,22 @@ namespace _P
         private void cboCharacters_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            var newItem = cboCharacters.SelectedItem;
-            var url = client.GetStringAsync(newItem).Result;
-            
+            Characters.Funny selectedPokemon = (Characters.Funny)cboCharacters.SelectedItem;
 
+            Characters.Loser pokemonurl;
 
-            var uri = new Uri(Theory.image);
-            var img = new BitmapImage(uri);
-            imgCharacter.Source = img;
-            MessageBox.Show(url);
+            using (var client = new HttpClient())
+            {
+                string pokemonUrl = selectedPokemon.url;
+                string json = client.GetStringAsync(pokemonUrl).Result;
+                pokemonurl = JsonConvert.DeserializeObject<Characters.Loser>(json);
+            }
+            lstSpecs.Items.Add(pokemonurl);
+
+           var uri = new Uri(selectedPokemon.image);
+          var img = new BitmapImage(uri);
+          imgCharacter.Source = img;
+          
         }
     }
 }
