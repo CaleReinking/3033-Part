@@ -32,13 +32,18 @@ namespace _P
         { 
             public string height { get; set; }
             public string weight { get; set; }
-            public string sprite { get; set; }
+            public Sprite sprites { get; set; }
             public override string ToString()
             {
                 string thise = $"The height is {height}\n the weight is {weight}\n";
                 return thise;
             }
             
+        }
+        public class Sprite
+        {
+            public string front_default { get; set; }
+            public string back_default { get; set; }
         }
         
     }
