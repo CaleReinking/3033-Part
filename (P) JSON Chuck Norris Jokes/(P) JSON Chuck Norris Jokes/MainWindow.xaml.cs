@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,10 +25,21 @@ namespace _P__JSON_Chuck_Norris_Jokes
         public MainWindow()
         {
             InitializeComponent();
+            string datasetURL = @"https://api.chucknorris.io/jokes/categories";
 
-            jsonResults = client.GetStringAsync(@"https://api.chucknorris.io/jokes/categories").Result;
+            Jokes.Joker jokes;
 
-            string[] cats = JsonConvert.DeserializeObject<string[]>(jsonResults);
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(datasetURL).Result;
+
+                jokes = JsonConvert.DeserializeObject<Jokes.Joker>(json);
+            }
+
+            foreach (var item in jokes.results)
+            {
+                cboJokes.Items.Add(item);
+            }
         }
     }
 }
