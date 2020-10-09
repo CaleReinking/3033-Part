@@ -25,21 +25,45 @@ namespace _P__JSON_Chuck_Norris_Jokes
         public MainWindow()
         {
             InitializeComponent();
-            string datasetURL = @"https://api.chucknorris.io/jokes/categories";
+            
 
-            Jokes.Joker jokes;
+            string[] jokeCategories;
 
             using (var client = new HttpClient())
             {
+                string datasetURL = @"https://api.chucknorris.io/jokes/categories";
                 string json = client.GetStringAsync(datasetURL).Result;
 
-                jokes = JsonConvert.DeserializeObject<Jokes.Joker>(json);
+                jokeCategories = JsonConvert.DeserializeObject<string[]>(json);
             }
-
-            foreach (var item in jokes.results)
+            cboJokes.Items.Add("All");
+            foreach (var item in jokeCategories)
             {
                 cboJokes.Items.Add(item);
             }
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            var selectCat = cboJokes.SelectedItem;
+            string categoryURL;
+            if (selectCat.ToString() == "All")
+            {
+                categoryURL = "https://api.chucknorris.io/jokes/random";
+            }
+            else
+            {
+                categoryURL = "https://api.chucknorris.io/jokes/random?category=" + selectCat;
+            }
+
+            Jokes jokes;
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(categoryURL).Result;
+                jokes = JsonConvert.DeserializeObject<Jokes>(json);
+            }
+            string joke = jokes.ToString();
+            MessageBox.Show(joke);
         }
     }
 }
