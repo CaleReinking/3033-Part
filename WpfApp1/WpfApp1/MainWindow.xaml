@@ -23,15 +23,17 @@
         <Label Content="City>" HorizontalAlignment="Left" Margin="471,318,0,0" VerticalAlignment="Top"/>
         <Label Content="State>" HorizontalAlignment="Left" Margin="471,291,0,0" VerticalAlignment="Top"/>
         <Label Content="Zipcode>" HorizontalAlignment="Left" Margin="471,349,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Height="23" Margin="594,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Height="23" Margin="594,141,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtMajor" HorizontalAlignment="Left" Height="23" Margin="594,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtGpa" HorizontalAlignment="Left" Height="23" Margin="594,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtStreetnumber" HorizontalAlignment="Left" Height="23" Margin="594,229,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtStreetname" HorizontalAlignment="Left" Height="23" Margin="594,260,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtState" HorizontalAlignment="Left" Height="23" Margin="594,291,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCity" HorizontalAlignment="Left" Height="23" Margin="594,319,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtZipcode" HorizontalAlignment="Left" Height="23" Margin="594,347,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Height="23" Margin="594,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Height="23" Margin="594,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMajor" HorizontalAlignment="Left" Height="23" Margin="594,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtGpa" HorizontalAlignment="Left" Height="23" Margin="594,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtStreetnumber" HorizontalAlignment="Left" Height="23" Margin="594,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtStreetname" HorizontalAlignment="Left" Height="23" Margin="594,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtState" HorizontalAlignment="Left" Height="23" Margin="594,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCity" HorizontalAlignment="Left" Height="23" Margin="594,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtZipcode" HorizontalAlignment="Left" Height="23" Margin="594,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lstStudents" HorizontalAlignment="Left" Height="265" Margin="53,110,0,0" VerticalAlignment="Top" Width="305" SelectionChanged="lstStudents_SelectionChanged"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="611,376,0,0" VerticalAlignment="Top" Width="89" Height="34" Click="btnSubmit_Click"/>
 
     </Grid>
 </Window>

@@ -14,16 +14,27 @@ namespace WpfApp1
         public string LastName { get; set; }
         public string Major { get; set; }
         public double GPA { get; set; }
+        public string done { get; set; }
         public Student()
            {
-            return ;
+            
            }
         public Student(string firstName, string lastName, string major, double gpa)
         {
             FirstName = firstName;
             LastName = lastName;
             Major = major;
-            GPA = gpa;
+            GPA = Convert.ToDouble(gpa);
+        }
+        public override string ToString()
+        {
+            string output = $"{FirstName}, {LastName}, {Major}, {GPA}";
+            return output;
+        }
+        public override string ToString(Student)
+        {
+            string outputs = $"{FirstName}, {LastName}";
+            return outputs;
         }
         public string CalculateDistinction(double Gpa)
         {
@@ -58,8 +69,8 @@ namespace WpfApp1
         }
         public override string ToString()
         {
-            string full = "";
-            full = $"{StreetNumber}";
+            
+            string full = $"{StreetNumber}, {StreetName}, {State}, {City}, {Zipcode}";
             return full;
         }
     }

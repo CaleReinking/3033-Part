@@ -23,6 +23,29 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            Student Student1 = new Student();
+            Student1.FirstName = txtFirstname.Text;
+            Student1.LastName = txtLastname.Text;
+            Student1.Major = txtMajor.Text;
+            Student1.GPA = Convert.ToDouble(txtGpa.Text);
+            lstStudents.Items.Add(Student1);
+        }
+
+        private void lstStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Address Address1 = new Address();
+            Address1.StreetNumber = Convert.ToInt32(txtStreetnumber.Text);
+            Address1.StreetName = txtStreetname.Text;
+            Address1.State = txtState.Text;
+            Address1.City = txtCity.Text;
+            Address1.Zipcode = Convert.ToInt32(txtZipcode.Text);
+            lstAddress.Items.Add(Address1);
+            txtNames.Items.Add(Student1);
         }
     }
 }
