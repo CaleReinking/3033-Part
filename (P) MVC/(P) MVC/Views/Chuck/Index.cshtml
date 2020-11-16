@@ -1,0 +1,13 @@
+﻿@model _P__MVC.Models.RandomChuckJoke
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h1>Random Chuck Norris Joke</h1>
+    <p>@Model.value</p>
+    <img src="@Model.icon_url" />
+</div>
+
+

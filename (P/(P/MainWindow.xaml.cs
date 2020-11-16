@@ -59,10 +59,11 @@ namespace _P
                 pokemonurl = JsonConvert.DeserializeObject<Characters.Loser>(json);
             }
             lstSpecs.Items.Add(pokemonurl);
-
-           var uri = new Uri(selectedPokemon.image);
+            
+          var uri = new Uri(selectedPokemon.image);
           var img = new BitmapImage(uri);
           imgCharacter.Source = img;
+          
           
         }
     }
