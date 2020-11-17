@@ -15,7 +15,7 @@ namespace _P__MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Cale Reinking's application description page.";
 
             return View();
         }
