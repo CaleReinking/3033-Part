@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "(P) MVC- EF", "(P) MVC- EF\(P) MVC- EF.vbproj", "{AC6B403D-AA65-4EFF-990F-C4D9AA3D9458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "(P) MVC - EF", "(P) MVC - EF\(P) MVC - EF.csproj", "{6272D36E-C9DC-4A4A-8811-A16FBE14D34D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC6B403D-AA65-4EFF-990F-C4D9AA3D9458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC6B403D-AA65-4EFF-990F-C4D9AA3D9458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC6B403D-AA65-4EFF-990F-C4D9AA3D9458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC6B403D-AA65-4EFF-990F-C4D9AA3D9458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6272D36E-C9DC-4A4A-8811-A16FBE14D34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6272D36E-C9DC-4A4A-8811-A16FBE14D34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6272D36E-C9DC-4A4A-8811-A16FBE14D34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6272D36E-C9DC-4A4A-8811-A16FBE14D34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
