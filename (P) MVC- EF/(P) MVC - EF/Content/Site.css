@@ -23,7 +23,7 @@ select,
 textarea {
     max-width: 280px;
 }
-.StudentInfo {
+.row.card {
     float: left;
     width: 18rem;
     height: 18rem;
@@ -32,7 +32,7 @@ textarea {
     background-color: silver;
     margin: 5px;
 }
-.StudentInfo:hover {
+.row.card:hover {
     zoom: 105%;
 }
 .CourseInfo {
